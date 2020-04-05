@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Solway&family=Barrio&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+$color-darkest: #000000;
+$color-dark: #292a2b;
+$color-med: #273338;
+$color-alt-dark: #5c6bc0;
+$color-alt-med: #7986cb;
+$color-white: #dfe0e4;
+$color-green: #5cdb80;
+$color-red: #ff5593;
+
+body {
+  font-family: "Solway", serif;
+}
+
+button {
+  font-family: "Solway", serif !important;
+}
+
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a.link-light,
+a.link-dark {
+  color: inherit;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &::before {
+    bottom: -2px;
+    right: 0;
+    content: "";
+    position: absolute;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 2px;
+  }
+
+  &:hover::before {
+    transform: scale(0);
+  }
+}
+
+a.link-light {
+  &:hover {
+    color: $color-med;
+  }
+  &::before {
+    background-color: $color-white;
+  }
+}
+
+a.link-dark {
+  &:hover {
+    color: $color-white;
+  }
+  &::before {
+    background-color: $color-med;
+  }
+}
+
+.spacing {
+  letter-spacing: 5px;
+}
+.neon-text {
+  font-family: "Barrio", cursive;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6,
+    0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+}
+
+button {
+  align-self: center;
+  background-color: $color-darkest;
+  border: 2px solid $color-white;
+  //border: 0;
+  // border-radius: 190px;
+  color: $color-white;
+  cursor: pointer;
+  font-family: "Barrio", cursive;
+  font-size: 1.25em;
+  margin: 0.5em 0;
+  outline: none;
+  padding: 1em;
+  transition: all 0.25s ease;
+  max-width: 400px;
+  //width: 200px;
+  width: 100%;
+  &:disabled,
+  &:disabled:hover {
+    cursor: auto;
+    pointer-events: none;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+}
+
+@media (hover: hover) {
+  button:hover,
+  button:active {
+    color: $color-darkest;
+    background-color: $color-white;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      font-size: 0.85em;
+    }
+  }
+
+  .flex-center-col {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: all 0.3s ease;
+  }
+
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+  // Styling for score displays
+  .score-high {
+    color: $color-green;
+  }
+
+  .score-low {
+    color: $color-red;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes open {
+    from {
+      max-height: 0;
+      opacity: 0;
+      margin-bottom: 0;
+    }
+    to {
+      max-height: 1000px;
+      opacity: 1;
+      margin-bottom: 2em;
+    }
+  }
+
+  @keyframes close {
+    from {
+      max-height: 1000px;
+      opacity: 1;
+      margin-bottom: 2em;
+    }
+    to {
+      max-height: 0;
+      opacity: 0;
+      margin-bottom: 0;
+    }
+  }
+}
