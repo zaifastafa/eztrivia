@@ -87,13 +87,10 @@ h3 {
 }
 
 li {
-    margin: 0.5em 0.5em;
-    transition: all 0.1s ease;
+    margin: 0.5em;
 
     &:hover {
-        color: $color-white;
-        //font-size: 1.5em;
-        transform: scale(1.5);
+        color: $color-main;
     }
 }
 
@@ -139,16 +136,6 @@ ul {
     &:hover {
         color: $color-white;
     }
-}
-
-// Open dropdown
-.open {
-    animation: open 1s ease forwards;
-}
-
-// Close dropdown
-.close {
-    animation: close 1s ease forwards;
 }
 
 button.neon-text {
