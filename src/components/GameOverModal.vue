@@ -46,7 +46,7 @@ export default {
         7: 'Not bad. Can you perform this well a second time?',
         8: "You're on your way to becoming a trivia master.",
         9: 'A regular trivia wiz. Nice work.',
-        10: 'Holy snikes!! A perfect score! Excellent work.',
+        10: 'Holy smokes!! A perfect score! Excellent work.',
       };
       let score = this.scores.playerOne.total;
       if (score) {

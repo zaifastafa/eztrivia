@@ -1,6 +1,6 @@
 <template lang="html">
 <div>
-  <p>Are you up for the challenge!</p>
+  <p>ARE YOU UP FOR THE CHALLENGE?</p>
 </div>
 </template>
 

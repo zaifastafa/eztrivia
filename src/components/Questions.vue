@@ -115,9 +115,9 @@ div {
 }
 
 .correct {
-    background-color: $color-white;
+    background-color: $color-main;
     border: 2px solid $color-white;
-    color: $color-darkest;
+    color: $color-white;
 }
 
 .incorrect {

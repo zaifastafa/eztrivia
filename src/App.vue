@@ -141,15 +141,6 @@ main {
   width: 100%;
 }
 
-.icon-menu,
-.icon-close {
-  transition: all 0.3s ease;
-
-  &:hover {
-    color: $color-med;
-  }
-}
-
 .grow {
   animation: grow 0.5s ease forwards; //background-color: $color-dark;
 }
